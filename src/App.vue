@@ -29,6 +29,7 @@
 
     <componentA></componentA>
 
+    <!--组件渲染-->
     <componentA v-for="(value,key) in objList">
     </componentA>
 
@@ -40,7 +41,7 @@
   import componentA from './components/a'
 
   export default {
-    components: {
+    components: {  //注册
       componentA   //相当于 componentA:componentA
     },
     data() {
@@ -70,6 +71,8 @@
       addItem:function(){
         console.log(this.goods)
         this.goods[1]={name:''}
+
+        this.goods.push({name:'lbi2',price:22,color:'yellow11'})
       }
     }
   }
